@@ -1,5 +1,5 @@
 {
-  "name": "vertioner",
+  "name": "versioner",
   "version": "1.0.2",
   "description": "A package to verify any directory containing a package.json file that has changed, has an updated package.json version.",
   "scripts": {
