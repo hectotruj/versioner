@@ -1,18 +1,21 @@
 {
   "name": "vertioner",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "A package to verify any directory containing a package.json file that has changed, has an updated package.json version.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "verify-versioning": "index.js"
+    "versioner": "./bin/versioner.js"
   },
   "keywords": [
     "node",
     "versioning"
   ],
   "author": "hectotruj@gmail.com",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "shelljs": "^0.8.3"
+  }
 }
