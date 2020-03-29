@@ -1,12 +1,12 @@
 {
-  "name": "versioner",
+  "name": "versioneer",
   "version": "1.0.3",
   "description": "A package to verify any directory containing a package.json file that has changed, has an updated package.json version.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "versioner": "./bin/versioner.js"
+    "versioneer": "./bin/versioneer.js"
   },
   "keywords": [
     "node",
