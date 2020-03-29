@@ -1,6 +1,6 @@
 {
   "name": "versioner",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A package to verify any directory containing a package.json file that has changed, has an updated package.json version.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
