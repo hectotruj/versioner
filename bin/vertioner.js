@@ -13,18 +13,19 @@ if (!sh.which('git')) {
 
 const hasDiff = sh.exec('git diff --quiet master').code
 
-if(hasDiff === 1) {
+if (hasDiff === 1) {
     sh.echo(`Package '${currentName}' has diverged from master`)
-    const masterVersion = JSON.parse(sh.exec('git show master:./package.json').stdout).version
-    if(currentVersion === masterVersion) { 
-        sh.echo('Current version is the same as master. Please update your version.');
+    const masterVersion = JSON.parse(sh.exec('git show master:./package.json', { silent: true })).version
+    if (currentVersion === masterVersion) {
+        sh.echo(`Current version of package '${currentName}' is the same as master. Please update your version.`);
         sh.exit(1);
     }
 
     sh.echo(`Current version ${currentVersion}, master version: ${masterVersion}`)
-
+    sh.exit(0);
 
 } else {
-    sh.echo(`Package '${currentName}' has no diffences with master`)
+    sh.echo(`Package '${currentName}' has no differences with master`)
+    sh.exit(1);
 }
 
