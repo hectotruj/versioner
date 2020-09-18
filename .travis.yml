@@ -4,7 +4,7 @@ node_js:
 
 deploy:
   on:
-    branch: production
+    branch: master
   provider: npm
   email: $EMAIL
   api_key: $API_KEY
