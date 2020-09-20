@@ -1,16 +1,17 @@
 {
   "name": "vertioner",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A package to verify any directory containing a package.json file that has changed, has an updated package.json version.",
   "scripts": {
-    "test": "node bin/vertioner.js && mocha"
+    "version": "node main/bin/vertioner.js",
+    "test": "nyc --reporter=lcov --reporter=text-summary mocha './test/**'"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hectotruj/vertioner.git"
   },
   "bin": {
-    "vertioner": "./bin/vertioner.js"
+    "vertioner": "./main/bin/vertioner.js"
   },
   "keywords": [
     "node",
@@ -22,6 +23,9 @@
     "shelljs": "^0.8.4"
   },
   "devDependencies": {
-    "mocha": "^8.1.3"
+    "chai": "^4.2.0",
+    "mocha": "^8.1.3",
+    "nyc": "^15.1.0",
+    "sinon": "^9.0.3"
   }
 }
